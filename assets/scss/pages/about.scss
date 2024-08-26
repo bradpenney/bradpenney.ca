@@ -1,0 +1,67 @@
+@import "../main";
+
+.splash-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  max-width: 1000px; //added 20230725
+  margin: 0 auto;
+
+  @media screen and (min-width: $medium) {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: $small) {
+    align-items: top; 
+    height: 125%;	  
+  }
+}
+
+.splash {
+  h1 {
+    font-size: 3em;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 1.25;
+    max-width: 22em;
+    letter-spacing: -0.03em;
+  }
+}
+
+.fancy {
+  color: $primary;
+}
+
+.handle {
+  display: inline-block;
+  margin-top: 0.275em;
+  color: $grey;
+  letter-spacing: 0.5px;
+}
+
+.writing {
+  text-decoration: none;
+  color: $primary;
+}
+
+/* overrides */
+
+main {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 80%;
+}
+
+.social-icons {
+  justify-content: flex-start;
+  padding-top: 1rem;
+  margin-left: -0.8rem; // offset to negate icon's padding to align with text above
+}

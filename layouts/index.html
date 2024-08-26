@@ -1,0 +1,26 @@
+{{ define "styles" }}
+    {{ $.Scratch.Set "style_opts" (dict "src" "scss/pages/about.scss" "dest" "css/about.css") }}
+{{ end }}
+
+{{ define "main" }}
+
+<div class="splash-container">
+  <div class="splash">
+    <h1>{{ .Params.heading }}</h1>
+    {{ if isset .Params "handle" }}
+    <span class="handle">@{{ .Params.handle }}</span>
+    {{ end }}
+    <h2>
+      {{ .Params.subheading }}
+    </h2>
+    {{ partial "social-icons.html" .}}
+    <p>I am a seasoned IT Professional with experience as a DevOps Engineer, an IT Infrastructure Lead, and an IT Application Administrator. My focus is streamlining manual processes using a combination of programming and software toolchains. I am passionate about combining cutting-edge technologies with software best practices in new and innovative ways.</p>
+    <p>Beyond my primary industry role, I share my knowledge by teaching part-time at <a href='https://www.nscc.ca' target="_blank">NSCC</a>. Teaching subjects I love, such as "Introductory Programming (with Python)" and "Introduction to Linux," allows me to share valuable skills and my passion for understanding computing systems with my students.</p>
+    <p>
+	<img src="rhcsa_badge.png">    
+	<img src="aws_cloud_practitioner_badge.png">
+    </p>
+</div>
+</div>
+
+{{ end }}
